@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Contact Details
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="UK_or_ROW">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      What are your contact details?
+
+      <form class="form" action="checkanswers" method="post">
+
+    </h1>
+  </legend>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-1">
+      Name of contact <span class="govuk-visually-hidden">line 1 of 2</span>
+    </label>
+    <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1"></div>
+
+
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-town">
+      Landline phone number<br>
+      (do not use +44. For international numbers include the country code number, like 0044 808 157 0192, not +44 808 157 0192)
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2"></div>
+
+
+    <br>
+    <br>
+
+  <button class="govuk-button" data-module="govuk-button">Save & Continue</button>
+
+
+</fieldset>
+
+{% endblock %}

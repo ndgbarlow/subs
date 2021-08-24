@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Gov Gateway
+{% endblock %}
+
+
+ {% block beforeContent %}
+<!-- beta banner -->
+
+
+
+{% endblock %} {% block content %}
+
+<!-- Header -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">Sign in using Government Gateway</h1>
+
+      <form class="form" action="start_page" method="post">
+
+    <form method="get" action="" name="">
+      <!-- User ID and password inputs -->
+      <div
+        class="govuk-form-group"
+        data-required=""
+        data-error="Enter Government Gateway user ID">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label" for="user-id">
+            Government Gateway user ID
+          </label>
+        </h1>
+        <div id="user-id-hint" class="govuk-hint">
+          This could be up to 12 characters.
+        </div>
+        <input
+          class="govuk-input govuk-!-width-one-half"
+          id="user-id"
+          name="user-id"
+          type="text"
+          aria-describedby="user-id-hint"/>
+      </div>
+      <div
+        class="govuk-form-group"
+        data-required=""
+        data-error="Enter password">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label" for="password"> Password </label>
+        </h1>
+        <input
+          class="govuk-input govuk-!-width-three-quarters"
+          id="password"
+          name="password"
+          type="password"/>
+      </div>
+
+
+
+      <button class="govuk-button" data-module="govuk-button">Sign in
+         </button>
+
+    </form>
+    <!-- User registration link -->
+    <div class="govuk-body">
+      <a href="#" class="govuk-link">Create sign in details</a>
+    </div>
+    <!-- Problems signing in h3 -->
+    <h3 class="govuk-heading-m govuk-!-margin-top-6">Problems signing in</h3>
+    <!-- Lost creds links -->
+    <ul class="govuk-list">
+      <li><a href="" class="govuk-link">
+        I have forgotten my password</a>
+      </li>
+      <li>
+        <a href="" class="govuk-link">
+          I have forgotten my Government Gateway user ID</a>
+      </li>
+      <li>
+        <a href="./lost-creds/lost-both/check-emails" class="govuk-link">
+          I have forgotten my Government Gateway user ID and password</a>
+      </li>
+    </ul>
+    <!-- deskpro link -->
+    <div class="govuk-body govuk-!-margin-top-6">
+      <a href="" class="govuk-link">Get help with this page</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
